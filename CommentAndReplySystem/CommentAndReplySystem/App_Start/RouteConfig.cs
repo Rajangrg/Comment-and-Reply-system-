@@ -18,6 +18,12 @@ namespace CommentAndReplySystem
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+               name: "AcoountRegister",
+               url: "{controller}/{action}/{id}",
+               defaults: new { controller = "Account", action = "Register", id = UrlParameter.Optional }
+           );
         }
     }
 }

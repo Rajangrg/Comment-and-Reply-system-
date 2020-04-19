@@ -10,14 +10,20 @@ namespace CommentAndReplySystem.ViewModel
     {
         [Required]
         public string UserName { get; set; }
+
         [Required]
+        [DataType(DataType.Password)]
 
         public string Password { get; set; }
 
-        [Required]
+   /*     [Required]
+        [DataType(DataType.Password)]
 
-        public string ConfirmPassword { get; set; }
+        public string ConfirmPassword { get; set; }*/
+
+
         [Required]
+        [DataType(DataType.EmailAddress)]
         public string email { get; set; }
     }
 }
