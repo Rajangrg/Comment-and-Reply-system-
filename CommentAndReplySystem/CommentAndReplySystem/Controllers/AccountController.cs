@@ -59,5 +59,25 @@ namespace CommentAndReplySystem.Controllers
             return RedirectToAction("Index", "CommentRoom");
 
         }
+
+
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        public ActionResult Login(LoginVM userLogin)
+        {
+            //validation 
+            bool userExists = _db.Users.Any(u => u.UserName == userLogin.UserName && u.Password == userLogin.Password);
+            if (!userExists)
+            {
+                ViewBag.AlertMessage = "Invalid Username or Password";
+                return View();
+            }
+            return RedirectToAction("Index", "CommentRoom");
+
+        }
     }
 }
