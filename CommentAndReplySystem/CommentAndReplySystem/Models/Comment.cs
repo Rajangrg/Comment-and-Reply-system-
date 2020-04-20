@@ -17,6 +17,8 @@ namespace CommentAndReplySystem.Models
         public int UserId { get; set; }
 
         public virtual User User { get; set; }
+
+        public DateTime? CreatedOn { get; set; }
         public ICollection<Reply> Replies { get; set; } // comment can have many replies 
     }
 }

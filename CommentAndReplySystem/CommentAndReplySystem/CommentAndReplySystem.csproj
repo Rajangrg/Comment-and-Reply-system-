@@ -136,6 +136,10 @@
     <Compile Include="Migrations\202004190508288_First-migration- tableCreated.Designer.cs">
       <DependentUpon>202004190508288_First-migration- tableCreated.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004200157364_UpdateTable - comment &amp; Reply.cs" />
+    <Compile Include="Migrations\202004200157364_UpdateTable - comment &amp; Reply.Designer.cs">
+      <DependentUpon>202004200157364_UpdateTable - comment &amp; Reply.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Comment.cs" />
@@ -205,6 +209,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202004190508288_First-migration- tableCreated.resx">
       <DependentUpon>202004190508288_First-migration- tableCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004200157364_UpdateTable - comment &amp; Reply.resx">
+      <DependentUpon>202004200157364_UpdateTable - comment &amp; Reply.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

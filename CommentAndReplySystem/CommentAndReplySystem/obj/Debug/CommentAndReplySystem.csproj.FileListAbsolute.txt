@@ -82,3 +82,4 @@ D:\Project\Comment-and-Reply-system-\CommentAndReplySystem\CommentAndReplySystem
 D:\Project\Comment-and-Reply-system-\CommentAndReplySystem\CommentAndReplySystem\obj\Debug\CommentAndReplySystem.pdb
 D:\Project\Comment-and-Reply-system-\CommentAndReplySystem\CommentAndReplySystem\obj\Debug\CommentAndReplySystem.Migrations.FirstmigrationtableCreated.resources
 D:\Project\Comment-and-Reply-system-\CommentAndReplySystem\CommentAndReplySystem\obj\Debug\CommentAndReplySystem.csproj.GenerateResource.cache
+D:\Project\Comment-and-Reply-system-\CommentAndReplySystem\CommentAndReplySystem\obj\Debug\CommentAndReplySystem.Migrations.UpdateTablecommentReply.resources

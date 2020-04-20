@@ -1,7 +1,27 @@
-﻿
+﻿@model IEnumerable<CommentAndReplySystem.Models.Comment>
+
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>All Comment</h2>
 
+
+<table class="table">
+   
+
+@foreach (var comment in Model) {
+    <tr>
+        <td>
+            <span style="font-weight: bold"> @Html.DisplayFor(modelItem => comment.User.UserName) :</span>   
+            <span> @Html.DisplayFor(modelItem => comment.userInput)</span>
+            <p> @Html.DisplayFor(modelItem => comment.CreatedOn)</p>
+
+           
+        </td>
+
+      
+    </tr>
+}
+
+</table>
