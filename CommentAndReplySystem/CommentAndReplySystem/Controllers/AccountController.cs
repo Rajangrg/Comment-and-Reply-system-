@@ -76,6 +76,7 @@ namespace CommentAndReplySystem.Controllers
                 ViewBag.AlertMessage = "Invalid Username or Password";
                 return View();
             }
+            Session["UserId"] = _db.Users.SingleOrDefault(x=>x.UserName == userLogin.UserName).Id;
             return RedirectToAction("Index", "CommentRoom");
 
         }

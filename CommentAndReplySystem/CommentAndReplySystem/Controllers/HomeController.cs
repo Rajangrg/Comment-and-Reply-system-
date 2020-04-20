@@ -10,6 +10,7 @@ namespace CommentAndReplySystem.Controllers
     {
         public ActionResult Index()
         {
+            Session["UserId"] = 0;
             return View();
         }
 

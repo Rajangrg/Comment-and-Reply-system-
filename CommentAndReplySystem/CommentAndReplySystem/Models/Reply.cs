@@ -14,11 +14,13 @@ namespace CommentAndReplySystem.Models
         [Required]
         public string userInput { get; set; }
 
+
         [ForeignKey("Comment")]
         public int CommentId { get; set; } //foreign key 
         public virtual Comment Comment { get; set; }
 
         public DateTime? CreatedOn { get; set; }
+
 
         [ForeignKey("User")]
         public int UserId { get; set; }
