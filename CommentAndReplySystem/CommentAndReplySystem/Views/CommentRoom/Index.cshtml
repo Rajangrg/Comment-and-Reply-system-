@@ -4,9 +4,18 @@
     ViewBag.Title = "Index";
 }
 
+<br />
+<h4>Write your comment here</h4>
+
+@using (Html.BeginForm("Comment", "CommentRoom", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <input type="text" class="form-control" name="userInput">
+    <input type="Submit" class="btn btn-sm btn-primary" value="Submit">
+}
+<br />
+<br />
 <h2>All Comment</h2>
-
-
 <table class="table">
 
     @* display Comment*@
@@ -26,7 +35,7 @@
                     <p> @reply.CreatedOn</p>
                 }
 
-                @* Submit reply on the comment*@ 
+                @* Submit reply on the comment*@
 
                 @using (Html.BeginForm("CommentReply", "CommentRoom", FormMethod.Post))
                 {

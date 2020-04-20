@@ -57,5 +57,34 @@ namespace CommentAndReplySystem.Controllers
         }
 
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Comment(CommentVM comment)
+        {
+            int sessionUserId = Convert.ToInt32(Session["UserId"]);
+
+            //validation
+            if (sessionUserId == 0)
+            {
+                return RedirectToAction("Login", "Account"); //if not login
+            }
+
+            if (ModelState.IsValid) //validation
+            {
+                Comment userComment = new Comment()
+                {
+                  
+                    UserId = sessionUserId,
+                    CreatedOn = DateTime.Now,
+                    userInput = comment.userInput
+                };
+                _db.Comments.Add(userComment);
+                await _db.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+            return View("Index"); //optional 
+        }
+
+
     }
 }
