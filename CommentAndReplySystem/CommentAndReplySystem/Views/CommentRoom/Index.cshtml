@@ -8,20 +8,26 @@
 
 
 <table class="table">
-   
 
-@foreach (var comment in Model) {
-    <tr>
-        <td>
-            <span style="font-weight: bold"> @Html.DisplayFor(modelItem => comment.User.UserName) :</span>   
-            <span> @Html.DisplayFor(modelItem => comment.userInput)</span>
-            <p> @Html.DisplayFor(modelItem => comment.CreatedOn)</p>
 
-           
-        </td>
+    @foreach (var comment in Model)
+    {
+        <tr>
+            <td>
+                <span style="font-weight: bold"> @Html.DisplayFor(modelItem => comment.User.UserName) :</span>
+                <span> @Html.DisplayFor(modelItem => comment.userInput)</span>
+                <p> @Html.DisplayFor(modelItem => comment.CreatedOn)</p>
 
-      
-    </tr>
-}
+                @foreach (var reply in comment.Replies)
+                {
+                    <span> Reply from @reply.User.UserName: @reply.userInput</span>
+                    <p> @reply.CreatedOn</p>
+                }
+
+            </td>
+
+
+        </tr>
+    }
 
 </table>
